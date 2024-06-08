@@ -5,10 +5,10 @@ import dayjs from "dayjs";
 import { Form, Formik } from "formik";
 import { LoginSchema } from "../schemas/LoginSchema";
 import PropTypes from "prop-types";
-import { useStore } from "../context/store";
 import { useGeolocation } from "../hooks/useGeolocation";
-import { toast } from "react-toastify";
+import { useStore } from "../context/store";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const initialValues = {
   name: "",
