@@ -1,5 +1,5 @@
 import { Skeleton, Typography } from "@mui/material";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/LoginForm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import usePokemons from "../../hooks/usePokemons";

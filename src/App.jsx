@@ -4,9 +4,9 @@ import { Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MainLayout from "./layouts/MainLayout";
 import Login from "./pages/Login/Login";
-import Weather from "./pages/Weather/Weather";
+import Weather from "./pages/Weather";
 import EditProfile from "./pages/EditProfile/EditProfile";
-import Pokemons from "./pages/Pokemons/Pokemons";
+import Pokemons from "./pages/Pokemons";
 
 const queryClient = new QueryClient();
 

@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import axios from "axios";
-import { useStore } from "../../context/store";
+import { useStore } from "../context/store";
 import {
   Box,
   Card,
@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { IoWater } from "react-icons/io5";
-import { getTomorrowWeather } from "../../utils";
+import { getTomorrowWeather } from "../utils";
 
 const useWeather = (lat, lon) => {
   return useQuery(["weather", lat, lon], async () => {

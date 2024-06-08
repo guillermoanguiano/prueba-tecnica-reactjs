@@ -14,7 +14,7 @@ import { FaRegUser } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
 
 import { useState } from "react";
-import { useStore } from "../../../context/store";
+import { useStore } from "../../context/store";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
