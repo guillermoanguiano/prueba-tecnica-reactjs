@@ -3,7 +3,6 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MainLayout from "./layouts/MainLayout";
-import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Weather from "./pages/Weather";
 import EditProfile from "./pages/EditProfile";
@@ -17,9 +16,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/pokemons" index element={<Pokemons />} />
             <Route path="/weather" element={<Weather />} />
-            <Route path="/pokemons" element={<Pokemons />} />
             <Route path="/edit-profile" element={<EditProfile />} />
           </Route>
 

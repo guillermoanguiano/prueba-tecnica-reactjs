@@ -43,7 +43,7 @@ export default function LoginForm({ pokemons }) {
 
     toast.success("Usuario creado correctamente");
 
-    navigate("/");
+    navigate("/pokemons");
   };
   return (
     <Box sx={{ display: "flex", flexDirection: "column", mt: 2 }}>
