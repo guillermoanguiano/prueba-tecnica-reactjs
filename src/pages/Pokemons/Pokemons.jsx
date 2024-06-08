@@ -1,7 +1,7 @@
 import axios from "axios";
-import PokemonCard from "../components/PokemonCard";
+import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import { useEffect, useState } from "react";
-import { useStore } from "../context/store";
+import { useStore } from "../../context/store";
 import { Box, Typography } from "@mui/material";
 
 export default function Pokemons() {

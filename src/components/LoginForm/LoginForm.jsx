@@ -3,10 +3,10 @@ import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
 import { Form, Formik } from "formik";
-import { LoginSchema } from "../schemas/LoginSchema";
+import { LoginSchema } from "../../schemas/LoginSchema";
 import PropTypes from "prop-types";
-import { useStore } from "../context/store";
-import { useGeolocation } from "../hooks/useGeolocation";
+import { useStore } from "../../context/store";
+import { useGeolocation } from "../../hooks/useGeolocation";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 

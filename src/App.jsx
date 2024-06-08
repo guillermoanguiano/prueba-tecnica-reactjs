@@ -3,10 +3,10 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MainLayout from "./layouts/MainLayout";
-import Login from "./pages/Login";
-import Weather from "./pages/Weather";
-import EditProfile from "./pages/EditProfile";
-import Pokemons from "./pages/Pokemons";
+import Login from "./pages/Login/Login";
+import Weather from "./pages/Weather/Weather";
+import EditProfile from "./pages/EditProfile/EditProfile";
+import Pokemons from "./pages/Pokemons/Pokemons";
 
 const queryClient = new QueryClient();
 

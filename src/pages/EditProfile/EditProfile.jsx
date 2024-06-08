@@ -1,20 +1,20 @@
 import {
   Autocomplete,
-  Box,
   Button,
   Skeleton,
   TextField,
   Typography,
 } from "@mui/material";
 import { Form, Formik } from "formik";
-import { LoginSchema } from "../schemas/LoginSchema";
-import usePokemons from "../hooks/usePokemons";
+import { LoginSchema } from "../../schemas/LoginSchema";
+import usePokemons from "../../hooks/usePokemons";
 import dayjs from "dayjs";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { useStore } from "../context/store";
+import { useStore } from "../../context/store";
 import { toast } from "react-toastify";
-import { useGeolocation } from "../hooks/useGeolocation";
+import { useGeolocation } from "../../hooks/useGeolocation";
+import * as S from "./EditProfile.styled";
 
 export default function EditProfile() {
   const { isLoading, data: pokemons } = usePokemons();
@@ -44,15 +44,7 @@ export default function EditProfile() {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        mt: 5,
-      }}
-    >
+    <S.EditProfileContainer>
       {isLoading ? (
         <Skeleton variant="rectangular" width={500} height={250} />
       ) : (
@@ -76,16 +68,10 @@ export default function EditProfile() {
             isSubmitting,
           }) => (
             <Form>
-              <Box
+              <S.FormContainer
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 2,
                   padding: { xs: 2, md: 4 },
-                  justifyContent: "center",
-                  bgcolor: "#fff",
                   width: { xs: "90%", md: "35rem" },
-                  borderRadius: 2,
                   boxShadow: 2,
                 }}
               >
@@ -196,11 +182,11 @@ export default function EditProfile() {
                 >
                   Editar Perfil
                 </Button>
-              </Box>
+              </S.FormContainer>
             </Form>
           )}
         </Formik>
       )}
-    </Box>
+    </S.EditProfileContainer>
   );
 }
