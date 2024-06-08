@@ -18,7 +18,7 @@ import { useStore } from "../../context/store";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const logout = useStore((state) => state.logout);
+  const { logout, user } = useStore((state) => state);
   const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
   const open = Boolean(anchorEl);
@@ -28,12 +28,11 @@ export default function Navbar() {
   };
 
   const handleClose = (e) => {
-    console.log(e.target.id);
     if (e.target.id === "logout") {
       logout();
       navigate("/login");
     } else if (e.target.id === "edit") {
-      navigate("/editar-perfil");
+      navigate("/edit-profile");
     }
     setAnchorEl(null);
   };
@@ -42,7 +41,7 @@ export default function Navbar() {
     <AppBar component="nav" color="inherit" position="sticky">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Style Juubi
+          {user?.name || "PokeApp"}
         </Typography>
         <Box
           sx={{

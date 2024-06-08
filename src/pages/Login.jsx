@@ -1,17 +1,8 @@
-import { useQuery } from "react-query";
-import axios from "axios";
 import { Box, Skeleton, Typography } from "@mui/material";
 import LoginForm from "../components/LoginForm";
 import { ToastContainer } from "react-toastify";
-
-const usePokemons = () => {
-  return useQuery("pokemons", async () => {
-    const { data } = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=12"
-    );
-    return data;
-  });
-};
+import "react-toastify/dist/ReactToastify.css";
+import usePokemons from "../hooks/usePokemons";
 
 export default function Login() {
   const { isLoading, data: pokemons } = usePokemons();

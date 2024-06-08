@@ -7,12 +7,10 @@ export const useGeolocation = () => {
   const { geolocation } = navigator;
 
   const successFn = (res) => {
-    console.log({ res });
     setLocationInfo(res.coords);
   };
 
   const errorFn = (res) => {
-    console.log({ res });
     setLocationError(res.message);
   };
 
